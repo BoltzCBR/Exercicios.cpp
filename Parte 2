@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Declare um array para armazenar as notas de 5 alunos
+    float notas[5];
+    
+    // Declare variáveis para calcular a soma, a média, a maior e a menor nota
+    float soma = 0;
+    float media;
+    float maiorNota = 0;
+    float menorNota = 10;
+
+    // Solicite ao usuário que insira as notas dos 5 alunos
+    cout << "Digite as notas dos 5 alunos: " << endl;
+
+    // Utilize um loop for para coletar as notas e realizar cálculos
+    for (int i = 0; i < 5; i++) {
+        cout << "Nota do aluno " << i + 1 << ": ";
+        cin >> notas[i];
+        soma += notas[i]; // Adicione cada nota à soma
+
+        // Verifique se a nota está dentro do intervalo permitido
+        if (notas[i] > 20) {
+            cout << "Aviso: Insira apenas notas até 20." << endl;
+            i--; // Reduza o índice para repetir a entrada da nota inválida
+            continue; // Pule a parte restante do loop e vá para a próxima iteração
+        }
+
+        // Atualize a maior e a menor nota
+        if (notas[i] > maiorNota) {
+            maiorNota = notas[i];
+        }
+        if (notas[i] < menorNota) {
+            menorNota = notas[i];
+        }
+    }
+
+    // Calcule a média
+    media = soma / 5;
+
+    // Exiba os resultados
+    cout << "Média das notas: " << media << endl;
+    cout << "Menor nota: " << menorNota << endl;
+    cout << "Maior nota: " << maiorNota << endl;
+
+    return 0;
+}
