@@ -1,0 +1,47 @@
+#include <iostream> // Isso inclui a biblioteca iostream, que fornece funcionalidades de entrada e saída (cin, cout).
+#include <cmath> // Para utilizar a constante M_PI
+
+int main() {
+    // Parte 1: Variáveis, constantes e operações matemáticas
+
+    // Declare variáveis para armazenar dois números inteiros
+    int a, b;
+
+    // Parte 1.1: Calculadora básica
+    std::cout << "Digite dois números inteiros separados por espaço: ";
+    std::cin >> a >> b;
+
+    // Realize operações matemáticas básicas
+    int soma = a + b;
+    int diferenca = a - b;
+    int produto = a * b;
+    
+    // Certifique-se de que b não seja zero antes de realizar a divisão
+    if (b != 0) {
+        int quociente = a / b;
+        int resto = a % b;
+
+        // Exiba os resultados
+        std::cout << "Soma: " << soma << std::endl;
+        std::cout << "Diferença: " << diferenca << std::endl;
+        std::cout << "Produto: " << produto << std::endl;
+        std::cout << "Quociente: " << quociente << std::endl;
+        std::cout << "Resto: " << resto << std::endl;
+    } else {
+        std::cout << "Erro: Não é possível dividir por zero." << std::endl;
+    }
+
+    // Parte 1.2: Constantes e área do círculo
+    const double PI = 3.14159;
+    double raio, area;
+
+    std::cout << "Digite o raio de um círculo: ";
+    std::cin >> raio;
+
+    // Calcule a área do círculo usando a fórmula area = PI * r^2
+    area = PI * std::pow(raio, 2);
+
+    std::cout << "Área do círculo: " << area << std::endl;
+
+    return 0;
+}
