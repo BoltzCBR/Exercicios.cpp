@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Declare uma variável para armazenar o número escolhido
+    int num;
+
+    // Solicite ao usuário que escolha um número entre 0 e 10
+    cout << "Escolha um número entre 0 e 10: ";
+    cin >> num;
+
+    // Exiba a tabuada do número escolhido
+    cout << "Tabuada de " << num << ":" << endl;
+
+    // Utilize um loop for para calcular e exibir a tabuada
+    for (int i = 1; i <= 10; i++) {
+        cout << num << " x " << i << " = " << num * i << endl;
+    }
+
+    return 0;
+}
