@@ -1,47 +1,30 @@
-#include <iostream> // Isso inclui a biblioteca iostream, que fornece funcionalidades de entrada e saída (cin, cout).
-#include <cmath> // Para utilizar a constante M_PI
+#include <iostream>
+
+using namespace std;
 
 int main() {
-    // Parte 1: Variáveis, constantes e operações matemáticas
+    // Declare variáveis a e b e inicialize-as com o valor 4
+    int a = 4;
+    int b = 4;
 
-    // Declare variáveis para armazenar dois números inteiros
-    int a, b;
-
-    // Parte 1.1: Calculadora básica
-    std::cout << "Digite dois números inteiros separados por espaço: ";
-    std::cin >> a >> b;
-
-    // Realize operações matemáticas básicas
-    int soma = a + b;
-    int diferenca = a - b;
-    int produto = a * b;
-    
-    // Certifique-se de que b não seja zero antes de realizar a divisão
-    if (b != 0) {
-        int quociente = a / b;
-        int resto = a % b;
-
-        // Exiba os resultados
-        std::cout << "Soma: " << soma << std::endl;
-        std::cout << "Diferença: " << diferenca << std::endl;
-        std::cout << "Produto: " << produto << std::endl;
-        std::cout << "Quociente: " << quociente << std::endl;
-        std::cout << "Resto: " << resto << std::endl;
-    } else {
-        std::cout << "Erro: Não é possível dividir por zero." << std::endl;
-    }
-
-    // Parte 1.2: Constantes e área do círculo
+    // Declare uma constante PI e inicialize-a com o valor de 3.14159
     const double PI = 3.14159;
-    double raio, area;
 
-    std::cout << "Digite o raio de um círculo: ";
-    std::cin >> raio;
+    // Declare a variável num
+    double num;
 
-    // Calcule a área do círculo usando a fórmula area = PI * r^2
-    area = PI * std::pow(raio, 2);
+    // Exiba os resultados das operações matemáticas
+    cout << "Soma: " << a + b << endl;
+    cout << "Diferença: " << a - b << endl;
+    cout << "Produto: " << a * b << endl;
+    cout << "Quociente: " << a / b << endl;
+    cout << "Resto: " << a % b << endl;
 
-    std::cout << "Área do círculo: " << area << std::endl;
+    // Solicite o valor do raio do usuário
+    cout << "Qual o valor que queres usar para o raio do círculo: ";
+    cin >> num;
+
+    // Calcule e exiba a área do círculo
+    cout << "Área do círculo: " << PI * (num * num) << endl;
 
     return 0;
-}
